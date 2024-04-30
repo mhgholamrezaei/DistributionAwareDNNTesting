@@ -214,9 +214,9 @@ for current_seed in seed_nums:
         predictions3 = np.argmax(model3.predict(gen_img)[0])
 
         if not predictions1 == predictions2 == predictions3:
-            if isInvalid(gen_img, vae, vae_threshold):
-                # print("generated outlier, not saving ",loop_index, iters)
-                continue
+            # if isInvalid(gen_img, vae, vae_threshold):
+            #     # print("generated outlier, not saving ",loop_index, iters)
+            #     continue
             
             #print(datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
             #print("generated valid input at loop index for current_seed", loop_index, current_seed)
